@@ -49,7 +49,7 @@ CLOVE_TEST(FillerAlgo_IncorrectNumberOfChannels)
     uint8_t source[3] = {255, 0, 0};
     int width = 16;
     int height = 16;
-    int channels = 1;
+    int channels = 5;
 
     int pixel_x = 0;
     int pixel_y = 0;
@@ -78,6 +78,6 @@ CLOVE_TEST(FillerAlgo_1x3First2PixelsUpdated)
     CLOVE_INT_EQ(0, source[5]);
 
     CLOVE_INT_EQ(0, source[6]);
-    CLOVE_INT_EQ(0, source[7]);
-    CLOVE_INT_EQ(255, source[8]);
+    CLOVE_INT_EQ(255, source[7]);
+    CLOVE_INT_EQ(0, source[8]);
 }
